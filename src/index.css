@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --primary-color: #f1356d;
+  --primary-color-disable: rgba(241, 55, 111, 0.4);
+  --primary-grey: rgb(220, 220, 220);
+  --font-grey: rgb(33, 33, 33);
+  --primary-grey-shadow: rgb(220, 220, 220, 0.6);
+}
+
+body {
+  font-family: quicksand, 'Courier New', Courier, monospace;
+  color: var(--font-grey);
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--primary-grey);
+}
+
+.navbar h1 {
+  color: var(--primary-color);
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.blog-preview {
+  /* border: 1px solid black; */
+  padding: 8px 32px;
+  margin: 20px 0;
+  border-bottom: 1px solid var(--primary-grey);
+}
+
+.blog-preview h2 {
+  color: var(--primary-color);
+}
+
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px var(--primary-grey-shadow);
+}
+
+.blog-preview a{
+  text-decoration: none;
+}
+
+.blog-details h2 {
+  color: var(--primary-color);
+  /* border: 1px solid black; */
+  margin-bottom: -10px;
+}
+
+.blog-details p {
+  line-height: 28px;
+}
+
+
+.blog-category {
+  font-weight: bold;
+}
+
+.create {
+  /* border: 1px solid black; */
+  padding: 0 32px;
+  max-width: 600px;
+  text-align: left;
+  line-height: 40px;
+}
+
+.create label {
+  /* border: 1px solid; */
+  padding-right: 24px;
+}
+
+.create input {
+  min-height: 24px;
+}
+
+.create textarea {
+  min-height: 480px;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.create select {
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.create__blog-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.create button {
+  padding: 8px 24px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 32px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px var(--primary-grey-shadow);
+}
+
+.create button:disabled {
+  background-color: var(--primary-color-disable);
+}
