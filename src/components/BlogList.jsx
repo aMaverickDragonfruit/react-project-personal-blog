@@ -12,9 +12,6 @@ const BlogList = ({ blogs, title, handleDelete }) => {
               <h2>{title}</h2>
             </Link>
             <p>Category: {category}</p>
-            <button className="btn--delete" onClick={() => handleDelete(id)}>
-              Delete blog
-            </button>
           </div>
         );
       })}

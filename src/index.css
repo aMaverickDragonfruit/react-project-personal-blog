@@ -6,7 +6,9 @@
   --primary-grey: rgb(220, 220, 220);
   --font-grey: rgb(33, 33, 33);
   --primary-grey-shadow: rgb(220, 220, 220, 0.6);
+  --link-blue: #2c92ec;
 }
+
 
 body {
   font-family: quicksand, 'Courier New', Courier, monospace;
@@ -126,4 +128,20 @@ body {
 
 .create button:disabled {
   background-color: var(--primary-color-disable);
+}
+
+
+.btn__del {
+  padding: 0;
+  margin-top: 0px;
+  border: none;
+  background-color: white;
+  color: var(--link-blue);
+}
+
+.btn__del:hover {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: white;
 }

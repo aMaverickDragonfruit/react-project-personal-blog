@@ -1,12 +1,15 @@
 import { useState } from "react";
-import fetchURL from "./api/fetchURL";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import fetchURL from "../fetchURL";
+import { postAPI } from "../api/postAPI";
 
-export default function() {
+export default function Create() {
     const BASE_URL = fetchURL();
     const [title, setTitle] = useState('');
     const [category, setCategory] = useState('Coding')
     const [body, setBody] = useState('');
     const [isPending, setIsPending] = useState(false);
+    const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,16 +17,9 @@ export default function() {
         // console.log(blog) 
         setIsPending(true);
 
-        fetch(BASE_URL, {
-            method: "POST",
-            headers: {"Content-Type": "Application/json"},
-            body: JSON.stringify(blog)
-        }).then(() => {
-            // console.log('new blog posted');
+        postAPI(BASE_URL, blog).then(() => {
             setIsPending(false);
-            setTitle('');
-            setCategory('Coding');
-            setBody('');
+            history.push('/');
         })
         
     }

@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# 1. Getting Started with the JSON Server
+
+## Available Scripts
+
+### `npx json-server --watch data/db.json --port 8000`
+
+Runs the data in the development mode.\
+Open [http://localhost:8000](http://localhost:8000) to view it in your browser.
+
+
+# 2. Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
